@@ -17,7 +17,7 @@ app.register(appRoutes);
 
 const start = async () => {
   try {
-    await app.listen({ port: Number(PORT) });
+    await app.listen({ port: Number(PORT), host: '0.0.0.0' });
 
     console.log(`Server is running on port: ${PORT}`);
   } catch (err) {
